@@ -1,0 +1,132 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>
+    .right-col-box{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .wh-box{
+        width: 342px;
+        height: 317px;
+    }
+    .text-size-class{
+        height: 60px;
+        width: 300px;
+        border: 1px solid black;
+        margin-left: 20px;
+        margin-top: 20px;
+        background-color: #F4F7FF;
+        border-radius: 10px;
+
+
+    }
+    .text-class{
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+</style>
+<body class="bg-blue-50 font-sans flex justify-center  ">
+    <div class="fllixing flex flex-col justify-start w-[1536px] border border-black">
+        <div class="container mx-auto p-4">
+            <!-- Header -->
+            <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md">
+                <div class="flex items-center">
+                    <div class=" text-white p-2 rounded-full">
+                       <img class="h-[51.24px] w-[51.24px]" src="assets/logo.png" alt="">
+                    </div>
+                    <h1 class="ml-2 text-2xl font-[35.67px] text-gray-800">Dev<span class="font-bold">Board</span></h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center bg-blue-100 p-2 w-[123px] h-[64px] rounded-[10px]">
+                    <img class="pl-[15px]" src="assets/checkbox.png" alt="">
+                        <span class="ml-2 text-[black] text-[30px] font-bold">23</span>
+                    </div>
+                    <div class="bg-blue-100 p-2 rounded-full">
+                        <img src="assets/theme-btn.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card box -->
+         <div class="two-left-right-box flex">
+             <div class="box-middle w-[1146px] mb-[50px] ml-[16px] h-[918px] bg-[#FFFFFF] rounded-[10px] border border-black" >
+                <div class="info flex justify-center items-center  gap-[23px] border border-black w-[1146px] h-[200px] ">
+                    <div class="flex justify-center items-center w-[263px] h-[128px] rounded-[10px] bg-[#F4F7FF] border border-black flex border border-black">
+                        <div class="w-[64px] h-[64px] bg-[#F4F7FF] ">
+                            <img class="pt-[10px]" src="assets/checkbox.png" alt="">
+                        </div>
+                        <div class="flex flex-col mb-[20px]">
+                            <h2 class="text-gray-500 text-[17px]">Task Assigned</h2>
+                            <h1 class="text-[30px] font-bold ">06</h1>
+                        </div>
+                    </div>
+                    <div class=" w-[524px] h-[128px] rounded-[10px] border border-black bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex justify-center items-center">
+                        <div class="  gap-[18px] w-[399px] h-[81px] border border-black flex text-[24px] text-[#FFFFFF]">
+                            <img src="assets/board.png" alt="">
+                            <p>Discover Something <br>
+                                New Today!</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center w-[263px] h-[128px] rounded-[10px] bg-[#F4F7FF] border border-black flex border border-black">
+                        <div class="w-[64px] h-[64px] bg-[#F4F7FF] ">
+                            <img class="pt-[10px]" src="assets/calender.png" alt="">
+                        </div>
+                        <div class="flex flex-col mb-[20px]">
+                            <h2 class="text-gray-500 text-[17px]">Wed ,</h2>
+                            <h1 class="text-[24px] font-bold ">Jul 28 2025</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-div-card">
+
+                    <div class="pl-[24px] pb-[36px] 3card flex gap-[35px]">
+                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                    </div>
+                    <div class="3card2 pl-[24px] flex gap-[35px] ">
+                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+
+                    </div>
+                </div>
+             </div>
+
+             <div class="right-box border border-black ml-[15px] rounded-[10px] bg-[#FFFFFF] w-[340px] h-[918px] gap-[20px]">
+                <div class="w-[340px] pl-[80px] border border-black h-[200px] flex flex-col justify-center">
+                    <div class="flex gap-[20px]">
+                        <img class="w-[24px] h-[24px] " src="assets/activity.png" alt="">
+                        <h1 class="text-[20px]">Activity Log</h1>
+                    </div>
+                    <div class="mt-[20px]">
+                        <button class="w-[150px] h-[44px] bg-[#3752FD] rounded-[10px] text-[#FFFFFF]" >Clear History</button>
+                    </div>
+                </div>
+
+                 <div class="middle-them">
+                     <div class="text-size-class">
+                         <p class="text-class">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                     </div>
+
+                 </div>
+             </div>
+
+         </div>
+
+
+    </div>
+
+</body>
+
+</html>
