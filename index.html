@@ -20,7 +20,7 @@
     .text-size-class{
         height: 60px;
         width: 300px;
-        border: 1px solid black;
+
         margin-left: 20px;
         margin-top: 20px;
         background-color: #F4F7FF;
@@ -32,9 +32,33 @@
         padding-left: 10px;
         padding-top: 5px;
     }
+
+    .custom-button {
+    width: 135px;
+    height: 44px;
+    background-color: #3752FD;
+    color: #FFFFFF;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.custom-button:hover {
+    transform: scale(1.1);
+}
+
+.done-btn{
+    width: 135px;
+    height: 44px;
+    background-color: #3752FD;
+    opacity: 20%;
+    color: #FFFFFF;
+    border-radius: 10px;
+
+}
+
 </style>
 <body class="bg-blue-50 font-sans flex justify-center  ">
-    <div class="fllixing flex flex-col justify-start w-[1536px] border border-black">
+    <div class="fllixing flex flex-col justify-start w-[1536px] ">
         <div class="container mx-auto p-4">
             <!-- Header -->
             <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow-md">
@@ -49,8 +73,8 @@
                     <img class="pl-[15px]" src="assets/checkbox.png" alt="">
                         <span class="ml-2 text-[black] text-[30px] font-bold">23</span>
                     </div>
-                    <div class="bg-blue-100 p-2 rounded-full">
-                        <img src="assets/theme-btn.png" alt="">
+                    <div id="color-cng" class="bg-blue-100 p-2 rounded-full">
+                        <img class="hover:scale-110 cursor-pointer" src="assets/theme-btn.png" alt="">
                     </div>
                 </div>
             </div>
@@ -58,9 +82,9 @@
 
         <!-- card box -->
          <div class="two-left-right-box flex">
-             <div class="box-middle w-[1146px] mb-[50px] ml-[16px] h-[918px] bg-[#FFFFFF] rounded-[10px] border border-black" >
-                <div class="info flex justify-center items-center  gap-[23px] border border-black w-[1146px] h-[200px] ">
-                    <div class="flex justify-center items-center w-[263px] h-[128px] rounded-[10px] bg-[#F4F7FF] border border-black flex border border-black">
+             <div class="box-middle w-[1146px] mb-[50px] ml-[16px] h-[918px] bg-[#FFFFFF] rounded-[10px] " >
+                <div class="info flex justify-center items-center  gap-[23px]  w-[1146px] h-[200px] ">
+                    <div class="flex justify-center items-center w-[263px] h-[128px] rounded-[10px] bg-[#F4F7FF]  flex ">
                         <div class="w-[64px] h-[64px] bg-[#F4F7FF] ">
                             <img class="pt-[10px]" src="assets/checkbox.png" alt="">
                         </div>
@@ -69,48 +93,156 @@
                             <h1 class="text-[30px] font-bold ">06</h1>
                         </div>
                     </div>
-                    <div class=" w-[524px] h-[128px] rounded-[10px] border border-black bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex justify-center items-center">
-                        <div class="  gap-[18px] w-[399px] h-[81px] border border-black flex text-[24px] text-[#FFFFFF]">
+                    <div class=" hover:scale-110 cursor-pointer w-[524px] h-[128px] rounded-[10px]  bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex justify-center items-center">
+                        <div id="go-to-blog" class="  gap-[18px] w-[399px] h-[81px]  flex text-[24px] text-[#FFFFFF]">
                             <img src="assets/board.png" alt="">
                             <p>Discover Something <br>
                                 New Today!</p>
                         </div>
                     </div>
-                    <div class="flex justify-center items-center w-[263px] h-[128px] rounded-[10px] bg-[#F4F7FF] border border-black flex border border-black">
+                    <div class="flex justify-center items-center w-[263px] h-[128px] rounded-[10px] bg-[#F4F7FF]  flex ">
                         <div class="w-[64px] h-[64px] bg-[#F4F7FF] ">
                             <img class="pt-[10px]" src="assets/calender.png" alt="">
                         </div>
                         <div class="flex flex-col mb-[20px]">
-                            <h2 class="text-gray-500 text-[17px]">Wed ,</h2>
-                            <h1 class="text-[24px] font-bold ">Jul 28 2025</h1>
+                            <h2 id="dayOfWeek" class="text-gray-500 text-[17px]"></h2>
+                            <h1 id="date" class="text-[24px] font-bold"></h1>
                         </div>
                     </div>
                 </div>
 
                 <div class="box-div-card">
 
-                    <div class="pl-[24px] pb-[36px] 3card flex gap-[35px]">
-                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
-                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
-                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                    <div class="pl-[24px] pb-[36px] 3card flex gap-[35px] ">
+                        <!-- 1st card -->
+                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                            <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
+                                <p class="pt-[5px]">ShopEase</p>
+                            </div>
+                            <h1 class="text-[24px]">Fix Mobile Button Issue </h1>
+                            <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
+                                <p class="text-[16px]">Debug using Chrome<br>
+                                     DevTools,check for overlappin</p>
+                            </div>
+                            <div class="w-[302px] h-[59px] flex justify-between">
+                                <div class="w-[119px] h-[46px]">
+                                    <p class="text-gray-500">Deadline</p>
+                                  <h1 id="current-date" class="current-date text-[16px]"></h1>
+                                </div>
+                                <button class="custom-button">Completed</button>
+                            </div>
+                        </div>
+
+
+                        <!-- 2nd -->
+                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                            <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
+                                <p class="pt-[5px]">CloudSync</p>
+                            </div>
+                            <h1 class="text-[24px]">Add Dark Mode</h1>
+                            <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
+                                <p class="text-[16px]">Store the user's preference in <br>
+                                    localStorage, update CSS varia</p>
+                            </div>
+                            <div class="w-[302px] h-[59px] flex justify-between">
+                                <div class="w-[119px] h-[46px]">
+                                    <p class="text-gray-500">Deadline</p>
+                                 <h1 id="urrent-date2" class="current-date text-[16px]"></h1>
+                                </div>
+                                <button class="custom-button">Completed</button>
+                            </div>
+                        </div>
+
+                        <!-- 3rd card -->
+                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                            <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
+                                <p class="pt-[5px]">SwiftPay</p>
+                            </div>
+                            <h1 class="text-[24px]">Optimize  Home page </h1>
+                            <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px] flex justify-center items-center text-gray-500">
+                                <p class="text-[16px]">Debug using Chrome<br>
+                                     DevTools,check for overlappin</p>
+                            </div>
+                            <div class="w-[302px] h-[59px] flex justify-between">
+                                <div class="w-[119px] h-[46px]">
+                                    <p class="text-gray-500">Deadline</p>
+                                 <h1 id="current-date3" class="current-date text-[16px]"></h1>
+                                </div>
+                                <button class="custom-button">Completed</button>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- 4th card -->
                     <div class="3card2 pl-[24px] flex gap-[35px] ">
-                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
-                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
-                        <div class="box border border-black wh-box rounded-[10px] bg-[#F4F7FF]"></div>
+                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                            <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
+                                <p class="pt-[5px]">Meta</p>
+                            </div>
+                            <h1 class="text-[24px]">Add new emoji 🤲</h1>
+                            <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
+                                <p class="text-[16px]">Debug using Chrome<br>
+                                     DevTools,check for overlappin</p>
+                            </div>
+                            <div class="w-[302px] h-[59px] flex justify-between">
+                                <div class="w-[119px] h-[46px]">
+                                    <p class="text-gray-500">Deadline</p>
+                                 <h1 id="current-date4" class="current-date text-[16px]"></h1>
+                                </div>
+                                <button  class="custom-button">Completed</button>
+                            </div>
+                        </div>
+
+                        <!-- 5th card -->
+                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                            <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
+                                <p class="pt-[5px]">Google LLC</p>
+                            </div>
+                            <h1 class="text-[24px]">Integrate OpenAI API </h1>
+                            <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
+                                <p class="text-[16px]">Debug using Chrome<br>
+                                     DevTools,check for overlappin</p>
+                            </div>
+                            <div class="w-[302px] h-[59px] flex justify-between">
+                                <div class="w-[119px] h-[46px]">
+                                    <p class="text-gray-500">Deadline</p>
+                                 <h1 id="current-date5"  class="current-date text-[16px]"></h1>
+                                </div>
+                                <button  class="custom-button">Completed</button>
+                            </div>
+                        </div>
+
+                        <!-- 6th card -->
+                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                            <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
+                                <p class="pt-[5px]">Glassdoar</p>
+                            </div>
+                            <h1 class="text-[24px]">Improve Job searching </h1>
+                            <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
+                                <p class="text-[16px]">Debug using Chrome<br>
+                                     DevTools,check for overlappin</p>
+                            </div>
+                            <div class="w-[302px] h-[59px] flex justify-between">
+                                <div class="w-[119px] h-[46px]">
+                                    <p class="text-gray-500">Deadline</p>
+                                 <h1 id="current-date6" class="current-date text-[16px]"></h1>
+                                </div>
+                                <button class="custom-button">Completed</button>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
              </div>
 
-             <div class="right-box border border-black ml-[15px] rounded-[10px] bg-[#FFFFFF] w-[340px] h-[918px] gap-[20px]">
-                <div class="w-[340px] pl-[80px] border border-black h-[200px] flex flex-col justify-center">
+             <div class="right-box  ml-[15px] rounded-[10px] bg-[#FFFFFF] w-[340px] h-[918px] gap-[20px]">
+                <div class="w-[340px] pl-[80px]  h-[200px] flex flex-col justify-center">
                     <div class="flex gap-[20px]">
                         <img class="w-[24px] h-[24px] " src="assets/activity.png" alt="">
                         <h1 class="text-[20px]">Activity Log</h1>
                     </div>
                     <div class="mt-[20px]">
-                        <button class="w-[150px] h-[44px] bg-[#3752FD] rounded-[10px] text-[#FFFFFF]" >Clear History</button>
+                        <button class="w-[150px] h-[44px] bg-[#3752FD] rounded-[10px] text-[#FFFFFF] hover:scale-110" >Clear History</button>
                     </div>
                 </div>
 
@@ -119,6 +251,7 @@
                          <p class="text-class">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
                      </div>
 
+
                  </div>
              </div>
 
@@ -126,7 +259,9 @@
 
 
     </div>
-
+  <script src="js/colorChange.js"></script>
+  <script src="js/goToBlog.js"></script>
+  <script src="js/dateSet.js"></script>
 </body>
 
 </html>
