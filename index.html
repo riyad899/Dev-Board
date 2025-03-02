@@ -71,7 +71,7 @@
                 <div class="flex items-center space-x-4">
                     <div class="flex items-center bg-blue-100 p-2 w-[123px] h-[64px] rounded-[10px]">
                     <img class="pl-[15px]" src="assets/checkbox.png" alt="">
-                        <span class="ml-2 text-[black] text-[30px] font-bold">23</span>
+                        <span id="all-task" class="ml-2 text-[black] text-[30px] font-bold">23</span>
                     </div>
                     <div id="color-cng" class="bg-blue-100 p-2 rounded-full">
                         <img class="hover:scale-110 cursor-pointer" src="assets/theme-btn.png" alt="">
@@ -90,7 +90,7 @@
                         </div>
                         <div class="flex flex-col mb-[20px]">
                             <h2 class="text-gray-500 text-[17px]">Task Assigned</h2>
-                            <h1 class="text-[30px] font-bold ">06</h1>
+                            <h1 class="text-[30px] font-bold ">0<span id="task-id">6</span></h1>
                         </div>
                     </div>
                     <div class=" hover:scale-110 cursor-pointer w-[524px] h-[128px] rounded-[10px]  bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] flex justify-center items-center">
@@ -119,7 +119,7 @@
                             <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
                                 <p class="pt-[5px]">ShopEase</p>
                             </div>
-                            <h1 class="text-[24px]">Fix Mobile Button Issue </h1>
+                            <h1 class="box-head-text text-[24px]">Fix Mobile Button Issue </h1>
                             <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
                                 <p class="text-[16px]">Debug using Chrome<br>
                                      DevTools,check for overlappin</p>
@@ -129,7 +129,7 @@
                                     <p class="text-gray-500">Deadline</p>
                                   <h1 id="current-date" class="current-date text-[16px]"></h1>
                                 </div>
-                                <button class="custom-button">Completed</button>
+                                <button id="btn-com" class="custom-button">Completed</button>
                             </div>
                         </div>
 
@@ -139,7 +139,7 @@
                             <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
                                 <p class="pt-[5px]">CloudSync</p>
                             </div>
-                            <h1 class="text-[24px]">Add Dark Mode</h1>
+                            <h1 class="box-head-text text-[24px]">Add Dark Mode</h1>
                             <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
                                 <p class="text-[16px]">Store the user's preference in <br>
                                     localStorage, update CSS varia</p>
@@ -158,7 +158,7 @@
                             <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
                                 <p class="pt-[5px]">SwiftPay</p>
                             </div>
-                            <h1 class="text-[24px]">Optimize  Home page </h1>
+                            <h1 class="box-head-text text-[24px]">Optimize  Home page </h1>
                             <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px] flex justify-center items-center text-gray-500">
                                 <p class="text-[16px]">Debug using Chrome<br>
                                      DevTools,check for overlappin</p>
@@ -179,7 +179,7 @@
                             <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
                                 <p class="pt-[5px]">Meta</p>
                             </div>
-                            <h1 class="text-[24px]">Add new emoji 🤲</h1>
+                            <h1 class="box-head-text text-[24px]">Add new emoji 🤲</h1>
                             <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
                                 <p class="text-[16px]">Debug using Chrome<br>
                                      DevTools,check for overlappin</p>
@@ -194,11 +194,11 @@
                         </div>
 
                         <!-- 5th card -->
-                        <div class="box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
+                        <div class=" box  gap-[20px] wh-box rounded-[10px] bg-[#F4F7FF] flex flex-col justify-center pl-[20px] ">
                             <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
                                 <p class="pt-[5px]">Google LLC</p>
                             </div>
-                            <h1 class="text-[24px]">Integrate OpenAI API </h1>
+                            <h1 class="box-head-text text-[24px]">Integrate OpenAI API </h1>
                             <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
                                 <p class="text-[16px]">Debug using Chrome<br>
                                      DevTools,check for overlappin</p>
@@ -217,7 +217,7 @@
                             <div class="w-[114px] h-[40px]  bg-[#FFFFFF] rounded-[10px] text-center">
                                 <p class="pt-[5px]">Glassdoar</p>
                             </div>
-                            <h1 class="text-[24px]">Improve Job searching </h1>
+                            <h1 class="box-head-text text-[24px]">Improve Job searching </h1>
                             <div class="bg-[#FFFFFF] rounded-[10px] w-[294px] h-[92px]  flex justify-center items-center text-gray-500">
                                 <p class="text-[16px]">Debug using Chrome<br>
                                      DevTools,check for overlappin</p>
@@ -242,17 +242,12 @@
                         <h1 class="text-[20px]">Activity Log</h1>
                     </div>
                     <div class="mt-[20px]">
-                        <button class="w-[150px] h-[44px] bg-[#3752FD] rounded-[10px] text-[#FFFFFF] hover:scale-110" >Clear History</button>
+                        <button id="Clear-logs" class="w-[150px] h-[44px] bg-[#3752FD] rounded-[10px] text-[#FFFFFF] hover:scale-110" >Clear History</button>
                     </div>
                 </div>
 
                  <div class="middle-them">
-                     <div class="text-size-class">
-                         <p class="text-class">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                     </div>
-
-
-                 </div>
+                </div>
              </div>
 
          </div>
@@ -262,6 +257,7 @@
   <script src="js/colorChange.js"></script>
   <script src="js/goToBlog.js"></script>
   <script src="js/dateSet.js"></script>
+  <script src="js/completeBtn.js"></script>
 </body>
 
 </html>
